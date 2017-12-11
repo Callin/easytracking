@@ -17,8 +17,7 @@ public class EasyTrackConfig {
         HikariDataSource hikariDataSource = new HikariDataSource();
         hikariDataSource.setJdbcUrl("jdbc:h2:mem:easytrack");
         hikariDataSource.setUsername("sa");
-        hikariDataSource.setPassword("sa");
-        hikariDataSource.setDataSourceClassName("org.h2.jdbcx.JdbcDataSource");
+        hikariDataSource.setPassword("");
 
         return hikariDataSource;
     }
