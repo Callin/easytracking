@@ -8,6 +8,7 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 @Repository
+@Transactional
 public class BugDaoImpl implements BugDao {
 
     @PersistenceContext
@@ -19,13 +20,11 @@ public class BugDaoImpl implements BugDao {
     }
 
     @Override
-    @Transactional
     public void createBug(Bug bug) {
         entityManager.persist(bug);
     }
 
     @Override
-    @Transactional
     public void updateBug(Bug bug) {
         entityManager.merge(bug);
     }

@@ -8,6 +8,7 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 @Repository
+@Transactional
 public class FeatureDaoImpl implements FeatureDao {
 
     @PersistenceContext
@@ -19,13 +20,11 @@ public class FeatureDaoImpl implements FeatureDao {
     }
 
     @Override
-    @Transactional
     public void createFeature(Feature feature) {
         entityManager.persist(feature);
     }
 
     @Override
-    @Transactional
     public void updateFeature(Feature feature) {
         entityManager.merge(feature);
     }

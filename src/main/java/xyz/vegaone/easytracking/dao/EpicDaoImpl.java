@@ -8,6 +8,7 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 @Repository
+@Transactional
 public class EpicDaoImpl implements EpicDao {
 
     @PersistenceContext
@@ -19,13 +20,11 @@ public class EpicDaoImpl implements EpicDao {
     }
 
     @Override
-    @Transactional
     public void createEpic(Epic epic) {
         entityManager.persist(epic);
     }
 
     @Override
-    @Transactional
     public void updateEpic(Epic epic) {
         entityManager.merge(epic);
     }

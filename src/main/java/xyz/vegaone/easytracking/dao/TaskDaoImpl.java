@@ -8,6 +8,7 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 @Repository
+@Transactional
 public class TaskDaoImpl implements TaskDao {
 
     @PersistenceContext
@@ -19,13 +20,11 @@ public class TaskDaoImpl implements TaskDao {
     }
 
     @Override
-    @Transactional
     public void createTask(Task task) {
         entityManager.persist(task);
     }
 
     @Override
-    @Transactional
     public void updateTask(Task task) {
         entityManager.merge(task);
     }
