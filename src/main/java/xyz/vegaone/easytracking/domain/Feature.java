@@ -36,7 +36,7 @@ public class Feature {
 
     @Override
     public String toString() {
-        return "FeatureDao{" +
+        return "Feature{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
