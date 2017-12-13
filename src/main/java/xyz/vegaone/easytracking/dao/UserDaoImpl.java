@@ -8,6 +8,7 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 @Repository
+@Transactional
 public class UserDaoImpl implements UserDao {
 
     @PersistenceContext
@@ -19,13 +20,12 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    @Transactional
     public void createUser(User user) {
-        entityManager.persist(user);
+
+        entityManager.merge(user);
     }
 
     @Override
-    @Transactional
     public void updateUser(User user) {
         entityManager.merge(user);
     }
