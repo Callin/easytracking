@@ -8,8 +8,9 @@ import xyz.vegaone.easytracking.domain.User;
  */
 @Service
 public interface UserDao {
+
     /**
-     * Fetches the user entity from hte database based on its id
+     * Fetches the user entity from the database based on its id
      *
      * @param id    the id of the user
      * @return      the user entity
@@ -32,6 +33,7 @@ public interface UserDao {
 
     /**
      * Deletes the user from the database
+     *
      * @param user  to be deleted
      */
     void deleteUser(User user);
