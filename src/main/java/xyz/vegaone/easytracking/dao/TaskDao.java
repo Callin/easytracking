@@ -12,10 +12,10 @@ public interface TaskDao {
     /**
      * Fetches the task entity from the database based on its id
      *
-     * @param task  the id of the task
+     * @param id    the id of the task
      * @return      the task entity
      */
-    Task getTask(Task task);
+    Task getTask(Long id);
 
     /**
      * Creates a new record in the database with the task details
