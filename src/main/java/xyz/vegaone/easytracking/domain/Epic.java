@@ -10,10 +10,11 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@Table(name = "epic")
 public class Epic {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 

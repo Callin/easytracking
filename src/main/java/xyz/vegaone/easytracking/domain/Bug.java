@@ -9,10 +9,11 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
+@Table(name = "bug")
 public class Bug {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
@@ -25,7 +26,7 @@ public class Bug {
     @Column(name = "status")
     private Status status;
 
-    @Column(name = "userstory")
+    @Column(name = "userStory")
     @ManyToOne
     private UserStory userStory;
 

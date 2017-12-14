@@ -10,10 +10,11 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@Table(name = "feature")
 public class Feature {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
@@ -30,7 +31,7 @@ public class Feature {
     @ManyToOne
     private Epic epic;
 
-    @Column(name = "userstory")
+    @Column(name = "userStory")
     @OneToMany(mappedBy = "feature")
     private List<UserStory> userStories;
 

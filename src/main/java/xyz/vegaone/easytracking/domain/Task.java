@@ -9,10 +9,11 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
+@Table(name = "task")
 public class Task {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
