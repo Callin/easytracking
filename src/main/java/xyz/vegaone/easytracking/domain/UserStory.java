@@ -32,11 +32,11 @@ public class UserStory {
 
     @Column(name = "task")
     @OneToMany(mappedBy = "userStory")
-    private List<Task> tasks;
+    private List<Task> taskList;
 
     @Column(name = "bug")
     @OneToMany(mappedBy = "userStory")
-    private List<Bug> bugs;
+    private List<Bug> bugList;
 
     @Override
     public String toString() {
@@ -46,8 +46,8 @@ public class UserStory {
                 ", description='" + description + '\'' +
                 ", status=" + status +
                 ", feature=" + feature +
-                ", tasks=" + tasks +
-                ", bugs=" + bugs +
+                ", taskList=" + taskList +
+                ", bugList=" + bugList +
                 '}';
     }
 }

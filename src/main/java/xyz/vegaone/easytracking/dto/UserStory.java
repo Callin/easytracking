@@ -18,4 +18,8 @@ public class UserStory {
     private List<Task> tasks;
     private List<Bug> bugs;
 
+    @Override
+    public String toString() {
+        return "UserStory{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\'' + ", status=" + status + ", feature=" + feature + ", tasks=" + tasks + ", bugs=" + bugs + '}';
+    }
 }

@@ -32,7 +32,7 @@ public class Feature {
 
     @Column(name = "userStory")
     @OneToMany(mappedBy = "feature")
-    private List<UserStory> userStories;
+    private List<UserStory> userStoryList;
 
     @Override
     public String toString() {
@@ -42,7 +42,7 @@ public class Feature {
                 ", description='" + description + '\'' +
                 ", status=" + status +
                 ", epic=" + epic +
-                ", userStories=" + userStories +
+                ", userStoryList=" + userStoryList +
                 '}';
     }
 }

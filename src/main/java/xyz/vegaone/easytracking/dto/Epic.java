@@ -18,4 +18,8 @@ public class Epic {
     private Sprint sprint;
     private List<Feature> features;
 
+    @Override
+    public String toString() {
+        return "Epic{" + "id=" + id + ", title='" + title + '\'' + ", status=" + status + ", sprint=" + sprint + ", features=" + features + '}';
+    }
 }

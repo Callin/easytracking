@@ -15,4 +15,8 @@ public class Task {
     private Status status;
     private UserStory userStory;
 
+    @Override
+    public String toString() {
+        return "Task{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\'' + ", status=" + status + ", userStory=" + userStory + '}';
+    }
 }

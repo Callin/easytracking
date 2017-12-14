@@ -1,12 +1,12 @@
 package xyz.vegaone.easytracking.dao;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 import xyz.vegaone.easytracking.domain.Task;
 
 /**
  * Dao interface for CRUD operations on Task entity
  */
-@Service
+@Repository
 public interface TaskDao {
 
     /**

@@ -15,4 +15,8 @@ public class Bug {
     private Status status;
     private UserStory userStory;
 
+    @Override
+    public String toString() {
+        return "Bug{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\'' + ", status=" + status + ", userStory=" + userStory + '}';
+    }
 }

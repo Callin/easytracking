@@ -29,7 +29,7 @@ public class Epic {
 
     @Column(name = "feature")
     @OneToMany(mappedBy = "epic")
-    private List<Feature> features;
+    private List<Feature> featureList;
 
     @Override
     public String toString() {
@@ -38,7 +38,7 @@ public class Epic {
                 ", title='" + title + '\'' +
                 ", status=" + status +
                 ", sprint=" + sprint +
-                ", features=" + features +
+                ", featureList=" + featureList +
                 '}';
     }
 }

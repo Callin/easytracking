@@ -1,12 +1,12 @@
 package xyz.vegaone.easytracking.dao;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 import xyz.vegaone.easytracking.domain.Feature;
 
 /**
  * Dao interface for CRUD operations on Feature entity
  */
-@Service
+@Repository
 public interface FeatureDao {
 
     /**

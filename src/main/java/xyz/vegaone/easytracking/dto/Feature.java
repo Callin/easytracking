@@ -18,4 +18,8 @@ public class Feature {
     private Epic epic;
     private List<UserStory> userStories;
 
+    @Override
+    public String toString() {
+        return "Feature{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\'' + ", status=" + status + ", epic=" + epic + ", userStories=" + userStories + '}';
+    }
 }

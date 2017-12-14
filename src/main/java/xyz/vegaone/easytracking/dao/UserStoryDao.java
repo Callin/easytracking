@@ -1,12 +1,12 @@
 package xyz.vegaone.easytracking.dao;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 import xyz.vegaone.easytracking.domain.UserStory;
 
 /**
  * Dao interface for CRUD operations on UserStory entity
  */
-@Service
+@Repository
 public interface UserStoryDao {
 
     /**
