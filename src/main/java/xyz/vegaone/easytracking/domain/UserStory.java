@@ -32,11 +32,11 @@ public class UserStory {
     private Feature feature;
 
     @Column(name = "task")
-    @OneToMany(mappedBy = "userstory")
+    @OneToMany(mappedBy = "userStory")
     private List<Task> tasks;
 
     @Column(name = "bug")
-    @OneToMany(mappedBy = "userstory")
+    @OneToMany(mappedBy = "userStory")
     private List<Bug> bugs;
 
     @Override
