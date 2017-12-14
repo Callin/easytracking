@@ -27,7 +27,6 @@ public class UserStory {
     @Column(name = "status")
     private Status status;
 
-    @Column(name = "feature")
     @ManyToOne
     private Feature feature;
 

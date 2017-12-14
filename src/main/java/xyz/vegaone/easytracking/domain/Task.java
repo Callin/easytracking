@@ -26,7 +26,6 @@ public class Task {
     @Column(name = "status")
     private Status status;
 
-    @Column(name = "userStory")
     @ManyToOne
     private UserStory userStory;
 

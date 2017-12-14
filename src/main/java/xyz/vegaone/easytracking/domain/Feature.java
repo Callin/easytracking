@@ -27,7 +27,6 @@ public class Feature {
     @Column(name = "status")
     private Status status;
 
-    @Column(name = "epic")
     @ManyToOne
     private Epic epic;
 

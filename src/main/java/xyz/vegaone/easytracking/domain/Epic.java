@@ -24,7 +24,6 @@ public class Epic {
     @Column(name = "status")
     private Status status;
 
-    @Column(name = "sprint")
     @ManyToOne
     private Sprint sprint;
 
