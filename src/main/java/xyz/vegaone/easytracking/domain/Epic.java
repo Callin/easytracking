@@ -3,7 +3,6 @@ package xyz.vegaone.easytracking.domain;
 import lombok.Getter;
 import lombok.Setter;
 import xyz.vegaone.easytracking.utils.Status;
-
 import javax.persistence.*;
 import java.util.List;
 

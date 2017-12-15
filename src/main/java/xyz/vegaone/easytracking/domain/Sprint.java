@@ -2,8 +2,11 @@ package xyz.vegaone.easytracking.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.persistence.*;
+import xyz.vegaone.easytracking.dto.Epic;
+
+import java.util.List;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -15,6 +18,22 @@ public class Sprint {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
+    @Column(name = "startDate")
+    private LocalDate startDate;
+
+    @Column(name = "endDate")
+    private LocalDate endDate;
+
+    @Column(name = "numberOfDays")
+    private int numberOfDays;
+
+    @ManyToOne
+    @JoinColumn(name = "project")
+    private Project project;
+
+    @OneToMany(mappedBy = "epic")
+    private List<Epic> epicList;
 
     @Override
     public String toString() {
