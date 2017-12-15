@@ -6,7 +6,7 @@ import xyz.vegaone.easytracking.domain.User;
 /**
  * Dao interface for CRUD operations on User entity
  */
-@Service
+
 public interface UserDao {
     /**
      * Fetches the user entity from hte database based on its id
