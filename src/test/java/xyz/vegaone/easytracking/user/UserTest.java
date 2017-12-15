@@ -25,6 +25,8 @@ public class UserTest {
 
     public final static String USER_NAME = "Johny";
     public final static Long USER_ID = 1L;
+    public final static String UPDATED_USER_NAME = "Bravo";
+    public final static Long UPDATED_USER_ID = 2L;
 
     @Before
     public void setUp() {
@@ -57,12 +59,29 @@ public class UserTest {
     public void getUserTest() {
 
         User returnedUser = em.find(User.class, USER_ID);
+        Assert.assertNotNull("There should have been one user saved in the database.", returnedUser);
         Assert.assertEquals("The user id should have matched", USER_ID, returnedUser.getId());
         Assert.assertEquals("The user name should have matched", USER_NAME, returnedUser.getName());
     }
 
     @Test
     public void updateUser() {
-        
+
+        User returnedUser = em.find(User.class, USER_ID);
+        returnedUser.setName(UPDATED_USER_NAME);
+        returnedUser.setId(UPDATED_USER_ID);
+        userDao.updateUser(returnedUser);
+        Assert.assertNotNull("There should have been one user saved in the database.", returnedUser);
+        Assert.assertEquals("The user id should have matched", UPDATED_USER_ID, returnedUser.getId());
+        Assert.assertEquals("The user name should have matched", UPDATED_USER_NAME, returnedUser.getName());
+    }
+
+    @Test
+    public void deleteUser() {
+
+        User returnedUser = em.find(User.class, USER_ID);
+        userDao.deleteUser(returnedUser);
+        returnedUser = em.find(User.class, USER_ID);
+        Assert.assertNull("We should have no user here", returnedUser);
     }
 }

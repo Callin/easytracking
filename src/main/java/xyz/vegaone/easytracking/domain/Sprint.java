@@ -3,7 +3,6 @@ package xyz.vegaone.easytracking.domain;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
-import xyz.vegaone.easytracking.dto.Epic;
 
 import java.util.List;
 import java.time.LocalDate;
@@ -32,7 +31,7 @@ public class Sprint {
     @JoinColumn(name = "project")
     private Project project;
 
-    @OneToMany(mappedBy = "epic")
+    @OneToMany(mappedBy = "sprint")
     private List<Epic> epicList;
 
     @Override

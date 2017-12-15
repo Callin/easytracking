@@ -22,6 +22,6 @@ public class Project {
     @Column(name = "description")
     private String description;
 
-    @OneToMany(mappedBy = "epic")
+    @OneToMany(mappedBy = "project")
     private List<Sprint> sprintList;
 }
