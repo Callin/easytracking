@@ -1,6 +1,7 @@
 package xyz.vegaone.easytracking.user;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +26,16 @@ public class UserTest {
     public final static String USER_NAME = "Johny";
     public final static Long USER_ID = 1L;
 
+    @Before
+    public void setUp() {
+        User testUser = new User();
+        testUser.setName(USER_NAME);
+        testUser.setId(USER_ID);
+        userDao.createUser(testUser);
+    }
+
     @Test
-    public void createUserTest(){
+    public void createUserTest() {
         // given
         User user = new User();
 
@@ -42,5 +51,18 @@ public class UserTest {
         Assert.assertEquals("The user id should have matched", USER_ID, savedUser.getId());
         Assert.assertEquals("The user name should have matched", USER_NAME, savedUser.getName());
 
+    }
+
+    @Test
+    public void getUserTest() {
+
+        User returnedUser = em.find(User.class, USER_ID);
+        Assert.assertEquals("The user id should have matched", USER_ID, returnedUser.getId());
+        Assert.assertEquals("The user name should have matched", USER_NAME, returnedUser.getName());
+    }
+
+    @Test
+    public void updateUser() {
+        
     }
 }
