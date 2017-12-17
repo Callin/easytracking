@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @Setter
 @Entity
 @Table(name = "user")
-public class User {
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,4 +23,12 @@ public class User {
 
     @Column(name = "name")
     private String name;
+
+    @Override
+    public String toString() {
+        return "UserEntity{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

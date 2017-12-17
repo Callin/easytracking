@@ -1,6 +1,8 @@
 package xyz.vegaone.easytracking.config;
 
 import com.zaxxer.hikari.HikariDataSource;
+import org.dozer.DozerBeanMapper;
+import org.dozer.Mapper;
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,4 +24,8 @@ public class EasyTrackConfig {
         return hikariDataSource;
     }
 
+    @Bean
+    public Mapper mapper() {
+        return new DozerBeanMapper();
+    }
 }

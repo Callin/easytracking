@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>easytracking</name>
-	<description>An intuitive board to track tasks, user stories, features, epics, bugs.</description>
+	<description>An intuitive board to track tasks, userEntity stories, features, epics, bugs.</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -62,6 +62,12 @@
 			<artifactId>h2</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>net.sf.dozer</groupId>
+			<artifactId>dozer</artifactId>
+			<version>5.5.1</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
