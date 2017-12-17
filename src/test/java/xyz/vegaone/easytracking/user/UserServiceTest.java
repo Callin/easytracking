@@ -11,7 +11,7 @@ import xyz.vegaone.easytracking.service.UserService;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class UserEntityTest {
+public class UserServiceTest {
 
     @Autowired
     private UserService userService;
