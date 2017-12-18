@@ -5,13 +5,12 @@ import lombok.Setter;
 import xyz.vegaone.easytracking.utils.Status;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "userStory")
-public class UserStory {
+@Table(name = "bug")
+public class BugEnitty {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,26 +27,16 @@ public class UserStory {
     private Status status;
 
     @ManyToOne
-    private Feature feature;
-
-    @Column(name = "task")
-    @OneToMany(mappedBy = "userStory")
-    private List<Task> taskList;
-
-    @Column(name = "bug")
-    @OneToMany(mappedBy = "userStory")
-    private List<Bug> bugList;
+    private UserStoryEnitty userStoryEnitty;
 
     @Override
     public String toString() {
-        return "UserStory{" +
+        return "BugEnitty{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", status=" + status +
-                ", feature=" + feature +
-                ", taskList=" + taskList +
-                ", bugList=" + bugList +
+                ", userStoryEnitty=" + userStoryEnitty +
                 '}';
     }
 }

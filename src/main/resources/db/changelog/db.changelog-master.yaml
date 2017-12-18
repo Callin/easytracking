@@ -86,7 +86,7 @@
        author: david
        changes:
          - createTable:
-             tableName: feature
+             tableName: featureEnitty
              columns:
                - column:
                    name: id
@@ -154,7 +154,7 @@
        author: david
        changes:
          - createTable:
-             tableName: userStory
+             tableName: userStoryEnitty
              columns:
                - column:
                    name: id
@@ -188,7 +188,7 @@
        author: bogdan
        changes:
          - createTable:
-             tableName: sprint
+             tableName: sprintEnitty
              columns:
                - column:
                    name: id
@@ -213,7 +213,7 @@
                    constraints:
                      nullable: false
                - column:
-                   name: project
+                   name: projectEnitty
                    type: bigint
                    constraints:
                      nullable: false
@@ -222,7 +222,7 @@
        author: bogdan
        changes:
          - createTable:
-             tableName: project
+             tableName: projectEnitty
              columns:
                - column:
                    name: id

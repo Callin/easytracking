@@ -20,6 +20,6 @@ public class UserStory {
 
     @Override
     public String toString() {
-        return "UserStory{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\'' + ", status=" + status + ", feature=" + feature + ", tasks=" + tasks + ", bugs=" + bugs + '}';
+        return "UserStoryEnitty{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\'' + ", status=" + status + ", featureEnitty=" + feature + ", tasks=" + tasks + ", bugs=" + bugs + '}';
     }
 }

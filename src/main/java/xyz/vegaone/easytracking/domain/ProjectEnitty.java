@@ -9,8 +9,8 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(name = "project")
-public class Project {
+@Table(name = "projectEnitty")
+public class ProjectEnitty {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -22,6 +22,6 @@ public class Project {
     @Column(name = "description")
     private String description;
 
-    @OneToMany(mappedBy = "project")
-    private List<Sprint> sprintList;
+    @OneToMany(mappedBy = "projectEnitty")
+    private List<SprintEnitty> sprintEnittyList;
 }
