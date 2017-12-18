@@ -2,7 +2,7 @@ package xyz.vegaone.easytracking.dto;
 
 import lombok.Getter;
 import lombok.Setter;
-import xyz.vegaone.easytracking.domain.UserStoryEnitty;
+import xyz.vegaone.easytracking.domain.UserStory;
 import xyz.vegaone.easytracking.utils.Status;
 
 @Getter
@@ -13,10 +13,10 @@ public class Bug {
     private String title;
     private String description;
     private Status status;
-    private UserStoryEnitty userStoryEnitty;
+    private UserStory userStory;
 
     @Override
     public String toString() {
-        return "BugEnitty{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\'' + ", status=" + status + ", userStoryEnitty=" + userStoryEnitty + '}';
+        return "Bug{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\'' + ", status=" + status + ", userStory=" + userStory + '}';
     }
 }

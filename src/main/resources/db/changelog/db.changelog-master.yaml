@@ -86,7 +86,7 @@
        author: david
        changes:
          - createTable:
-             tableName: featureEnitty
+             tableName: feature
              columns:
                - column:
                    name: id
@@ -154,7 +154,7 @@
        author: david
        changes:
          - createTable:
-             tableName: userStoryEnitty
+             tableName: userStory
              columns:
                - column:
                    name: id
@@ -188,7 +188,7 @@
        author: bogdan
        changes:
          - createTable:
-             tableName: sprintEnitty
+             tableName: sprint
              columns:
                - column:
                    name: id

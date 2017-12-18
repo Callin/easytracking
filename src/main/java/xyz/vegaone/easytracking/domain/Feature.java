@@ -10,8 +10,8 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(name = "userStoryEnitty")
-public class UserStoryEnitty {
+@Table(name = "feature")
+public class Feature {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,26 +28,21 @@ public class UserStoryEnitty {
     private Status status;
 
     @ManyToOne
-    private FeatureEnitty featureEnitty;
+    private Epic epic;
 
-    @Column(name = "task")
-    @OneToMany(mappedBy = "userStoryEnitty")
-    private List<TaskEnitty> taskEnittyList;
-
-    @Column(name = "bug")
-    @OneToMany(mappedBy = "userStoryEnitty")
-    private List<BugEnitty> bugEnittyList;
+    @Column(name = "userStory")
+    @OneToMany(mappedBy = "feature")
+    private List<UserStory> userStoryList;
 
     @Override
     public String toString() {
-        return "UserStoryEnitty{" +
+        return "Feature{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", status=" + status +
-                ", featureEnitty=" + featureEnitty +
-                ", taskEnittyList=" + taskEnittyList +
-                ", bugEnittyList=" + bugEnittyList +
+                ", epic=" + epic +
+                ", userStoryList=" + userStoryList +
                 '}';
     }
 }

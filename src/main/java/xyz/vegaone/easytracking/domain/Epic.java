@@ -9,8 +9,8 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(name = "epicEnitty")
-public class EpicEnitty {
+@Table(name = "epic")
+public class Epic {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,20 +24,20 @@ public class EpicEnitty {
     private Status status;
 
     @ManyToOne
-    private SprintEnitty sprintEnitty;
+    private Sprint sprint;
 
-    @Column(name = "featureEnitty")
-    @OneToMany(mappedBy = "epicEnitty")
-    private List<FeatureEnitty> featureEnittyList;
+    @Column(name = "feature")
+    @OneToMany(mappedBy = "epic")
+    private List<Feature> featureList;
 
     @Override
     public String toString() {
-        return "EpicEnitty{" +
+        return "Epic{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", status=" + status +
-                ", sprintEnitty=" + sprintEnitty +
-                ", featureEnittyList=" + featureEnittyList +
+                ", sprint=" + sprint +
+                ", featureList=" + featureList +
                 '}';
     }
 }
