@@ -9,8 +9,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "bug")
-public class BugEnitty {
+@Table(name = "task")
+public class TaskEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,16 +27,16 @@ public class BugEnitty {
     private Status status;
 
     @ManyToOne
-    private UserStoryEnitty userStoryEnitty;
+    private UserStoryEntity userStoryEntity;
 
     @Override
     public String toString() {
-        return "BugEnitty{" +
+        return "TaskEntity{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", status=" + status +
-                ", userStoryEnitty=" + userStoryEnitty +
+                ", userStoryEntity=" + userStoryEntity +
                 '}';
     }
 }

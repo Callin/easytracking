@@ -14,7 +14,7 @@ public class Project {
 
     @Override
     public String toString() {
-        return "ProjectEnitty{" +
+        return "ProjectEntity{" +
                 "name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", sprints=" + sprints +

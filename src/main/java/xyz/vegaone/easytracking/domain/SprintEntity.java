@@ -10,8 +10,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity
-@Table(name = "sprintEnitty")
-public class SprintEnitty {
+@Table(name = "sprintEntity")
+public class SprintEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,14 +28,14 @@ public class SprintEnitty {
     private int numberOfDays;
 
     @ManyToOne
-    @JoinColumn(name = "projectEnitty")
-    private ProjectEnitty projectEnitty;
+    @JoinColumn(name = "projectEntity")
+    private ProjectEntity projectEntity;
 
-    @OneToMany(mappedBy = "sprintEnitty")
-    private List<EpicEnitty> epicEnittyList;
+    @OneToMany(mappedBy = "sprintEntity")
+    private List<EpicEntity> epicEntityList;
 
     @Override
     public String toString() {
-        return "SprintEnitty{" + "id=" + id + '}';
+        return "SprintEntity{" + "id=" + id + '}';
     }
 }

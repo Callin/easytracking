@@ -17,11 +17,11 @@ public class Sprint {
 
     @Override
     public String toString() {
-        return "SprintEnitty{" +
+        return "SprintEntity{" +
                 "startDate=" + startDate +
                 ", endDate=" + endDate +
                 ", numberOfDays=" + numberOfDays +
-                ", projectEnitty=" + project +
+                ", projectEntity=" + project +
                 ", epics=" + epics +
                 '}';
     }
