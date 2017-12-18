@@ -33,7 +33,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     @ResponseStatus(value = HttpStatus.OK)
-    public User createUser(@PathVariable("id") Long id) {
+    public User getUser(@PathVariable("id") Long id) {
 
         return userService.getUser(id);
     }
@@ -48,6 +48,7 @@ public class UserController {
     @DeleteMapping
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void deleteUser(User user) {
+
         userService.deleteUser(user);
     }
 }
