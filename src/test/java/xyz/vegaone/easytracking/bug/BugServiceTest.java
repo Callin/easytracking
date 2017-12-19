@@ -1,4 +1,4 @@
-package xyz.vegaone.easytracking.user;
+package xyz.vegaone.easytracking.bug;
 
 import org.junit.Assert;
 import org.junit.Test;
