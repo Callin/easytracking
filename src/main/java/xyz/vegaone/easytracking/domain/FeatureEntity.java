@@ -10,7 +10,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(name = "featureEntity")
+@Table(name = "feature")
 public class FeatureEntity {
 
     @Id
@@ -28,10 +28,10 @@ public class FeatureEntity {
     private Status status;
 
     @ManyToOne
+    @JoinColumn(name = "epic")
     private EpicEntity epicEntity;
 
-    @Column(name = "userStoryEntity")
-    @OneToMany(mappedBy = "featureEntity")
+    @OneToMany(mappedBy = "feature")
     private List<UserStoryEntity> userStoryEntityList;
 
     @Override

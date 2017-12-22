@@ -13,7 +13,7 @@ public class Sprint {
     LocalDate endDate;
     int numberOfDays;
     private Project project;
-    private List<Epic> epics;
+    private List<Epic> epicList;
 
     @Override
     public String toString() {
@@ -22,7 +22,7 @@ public class Sprint {
                 ", endDate=" + endDate +
                 ", numberOfDays=" + numberOfDays +
                 ", projectEntity=" + project +
-                ", epics=" + epics +
+                ", epicList=" + epicList +
                 '}';
     }
 }

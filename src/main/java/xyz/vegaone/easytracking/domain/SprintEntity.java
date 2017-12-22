@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Entity
-@Table(name = "sprintEntity")
+@Table(name = "sprint")
 public class SprintEntity {
 
     @Id
@@ -28,10 +28,10 @@ public class SprintEntity {
     private int numberOfDays;
 
     @ManyToOne
-    @JoinColumn(name = "projectEntity")
+    @JoinColumn(name = "project")
     private ProjectEntity projectEntity;
 
-    @OneToMany(mappedBy = "sprintEntity")
+    @OneToMany(mappedBy = "sprint")
     private List<EpicEntity> epicEntityList;
 
     @Override

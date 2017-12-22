@@ -9,7 +9,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(name = "epicEntity")
+@Table(name = "epic")
 public class EpicEntity {
 
     @Id
@@ -24,10 +24,10 @@ public class EpicEntity {
     private Status status;
 
     @ManyToOne
+    @JoinColumn(name = "sprint")
     private SprintEntity sprintEntity;
 
-    @Column(name = "featureEntity")
-    @OneToMany(mappedBy = "epicEntity")
+    @OneToMany(mappedBy = "epic")
     private List<FeatureEntity> featureEntityList;
 
     @Override

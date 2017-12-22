@@ -27,6 +27,7 @@ public class TaskEntity {
     private Status status;
 
     @ManyToOne
+    @JoinColumn(name = "userStory")
     private UserStoryEntity userStoryEntity;
 
     @Override

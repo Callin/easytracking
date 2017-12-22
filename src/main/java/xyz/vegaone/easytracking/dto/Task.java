@@ -2,7 +2,6 @@ package xyz.vegaone.easytracking.dto;
 
 import lombok.Getter;
 import lombok.Setter;
-import xyz.vegaone.easytracking.domain.UserStoryEntity;
 import xyz.vegaone.easytracking.utils.Status;
 
 @Getter
@@ -13,10 +12,10 @@ public class Task {
     private String title;
     private String description;
     private Status status;
-    private UserStoryEntity userStoryEntity;
+    private UserStory userStory;
 
     @Override
     public String toString() {
-        return "TaskEntity{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\'' + ", status=" + status + ", userStoryEntity=" + userStoryEntity + '}';
+        return "TaskEntity{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\'' + ", status=" + status + ", userStory=" + userStory + '}';
     }
 }

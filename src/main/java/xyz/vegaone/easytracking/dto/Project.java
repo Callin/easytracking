@@ -10,14 +10,14 @@ import java.util.*;
 public class Project {
     private String name;
     private String description;
-    private List<Sprint> sprints;
+    private List<Sprint> sprintList;
 
     @Override
     public String toString() {
         return "ProjectEntity{" +
                 "name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", sprints=" + sprints +
+                ", sprintList=" + sprintList +
                 '}';
     }
 }

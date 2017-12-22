@@ -73,7 +73,6 @@ public class UserStoryServiceTest {
         Assert.assertNull("The userStoryEntity should have been removed from the database", findResult);
     }
 
-    @Test
     public UserStory saveUserStory() {
         UserStory userStory = new UserStory();
         userStory.setTitle(USERSTORY_TITLE);

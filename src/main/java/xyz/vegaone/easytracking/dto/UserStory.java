@@ -15,11 +15,11 @@ public class UserStory {
     private String description;
     private Status status;
     private Feature feature;
-    private List<Task> tasks;
-    private List<Bug> bugs;
+    private List<Task> taskList;
+    private List<Bug> bugList;
 
     @Override
     public String toString() {
-        return "UserStoryEntity{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\'' + ", status=" + status + ", featureEntity=" + feature + ", tasks=" + tasks + ", bugs=" + bugs + '}';
+        return "UserStoryEntity{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\'' + ", status=" + status + ", featureEntity=" + feature + ", taskList=" + taskList + ", bugList=" + bugList + '}';
     }
 }
