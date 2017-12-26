@@ -40,15 +40,11 @@
                - column:
                    name: description
                    type: varchar(1000)
-                   constraints:
-                     nullable: false
                - column:
-                   name: status_id
-                   type: bigint
-                   constraints:
-                     nullable: false
+                   name: status
+                   type: varchar(10)
                - column:
-                   name: userStory_id
+                   name: userStory
                    type: bigint
                    constraints:
                      nullable: false
@@ -72,12 +68,13 @@
                    constraints:
                      nullable: false
                - column:
-                   name: status_id
-                   type: bigint
-                   constraints:
-                     nullable: false
+                   name: status
+                   type: varchar(10)
                - column:
-                   name: sprint_id
+                   name: sprint
+                   type: bigint
+               - column:
+                   name: project
                    type: bigint
                    constraints:
                      nullable: false
@@ -103,15 +100,11 @@
                - column:
                    name: description
                    type: varchar(1000)
-                   constraints:
-                     nullable: false
                - column:
-                   name: status_id
-                   type: bigint
-                   constraints:
-                     nullable: false
+                   name: status
+                   type: varchar(10)
                - column:
-                   name: epic_id
+                   name: epic
                    type: bigint
                    constraints:
                      nullable: false
@@ -137,15 +130,11 @@
                - column:
                    name: description
                    type: varchar(1000)
-                   constraints:
-                     nullable: false
                - column:
-                   name: status_id
-                   type: bigint
-                   constraints:
-                     nullable: false
+                   name: status
+                   type: varchar(10)
                - column:
-                   name: userStory_id
+                   name: userStory
                    type: bigint
                    constraints:
                      nullable: false
@@ -171,18 +160,17 @@
                - column:
                    name: description
                    type: varchar(1000)
-                   constraints:
-                     nullable: false
                - column:
-                   name: status_id
+                   name: status
+                   type: varchar(10)
+               - column:
+                   name: feature
                    type: bigint
                    constraints:
-                     nullable: false
+                      nullable: false
                - column:
-                   name: feature_id
+                   name: sprint
                    type: bigint
-                   constraints:
-                     nullable: false
    - changeSet:
        id: 7
        author: bogdan
@@ -239,5 +227,3 @@
                - column:
                    name: description
                    type: varchar(50)
-                   constraints:
-                     nullable: false

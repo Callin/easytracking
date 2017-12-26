@@ -25,8 +25,8 @@ public class UserStoryServiceTest {
         UserStory saveResult = saveUserStory();
 
         //then
-        Assert.assertNotNull("There should have been one userStoryEntity saved in the database", saveResult);
-        Assert.assertEquals("The userStoryEntity title should have matched", USERSTORY_TITLE, saveResult.getTitle());
+        Assert.assertNotNull("There should have been one userStory saved in the database", saveResult);
+        Assert.assertEquals("The userStory title should have matched", USERSTORY_TITLE, saveResult.getTitle());
 
     }
 
@@ -39,8 +39,8 @@ public class UserStoryServiceTest {
         UserStory findResult = userStoryService.getUserStory(saveResult.getId());
 
         //then
-        Assert.assertNotNull("There should have been one userStoryEntity saved in the database", findResult);
-        Assert.assertEquals("The userStoryEntity title should have matched", USERSTORY_TITLE, findResult.getTitle());
+        Assert.assertNotNull("There should have been one userStory saved in the database", findResult);
+        Assert.assertEquals("The userStory title should have matched", USERSTORY_TITLE, findResult.getTitle());
 
     }
 
@@ -56,7 +56,7 @@ public class UserStoryServiceTest {
 
         //then
         Assert.assertNotNull("There should have been one UserStoryEntity saved in the database", findResult);
-        Assert.assertNotEquals("The userStoryEntity title should have been changed", USERSTORY_TITLE, findResult.getTitle());
+        Assert.assertNotEquals("The userStory title should have been changed", USERSTORY_TITLE, findResult.getTitle());
 
     }
 
@@ -70,7 +70,7 @@ public class UserStoryServiceTest {
         UserStory findResult = userStoryService.getUserStory(saveResult.getId());
 
         //then
-        Assert.assertNull("The userStoryEntity should have been removed from the database", findResult);
+        Assert.assertNull("The userStory should have been removed from the database", findResult);
     }
 
     public UserStory saveUserStory() {

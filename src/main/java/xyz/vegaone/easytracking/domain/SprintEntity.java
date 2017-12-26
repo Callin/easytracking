@@ -2,6 +2,7 @@ package xyz.vegaone.easytracking.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+
 import javax.persistence.*;
 
 import java.util.List;
@@ -29,13 +30,20 @@ public class SprintEntity {
 
     @ManyToOne
     @JoinColumn(name = "project")
-    private ProjectEntity projectEntity;
+    private ProjectEntity project;
 
-    @OneToMany(mappedBy = "sprint")
-    private List<EpicEntity> epicEntityList;
+    @OneToMany(mappedBy = "sprint", cascade = CascadeType.ALL)
+    private List<UserStoryEntity> userStoryList;
 
     @Override
     public String toString() {
-        return "SprintEntity{" + "id=" + id + '}';
+        return "SprintEntity{" +
+                "id=" + id +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", numberOfDays=" + numberOfDays +
+                ", project=" + project +
+                ", userStoryList=" + userStoryList +
+                '}';
     }
 }

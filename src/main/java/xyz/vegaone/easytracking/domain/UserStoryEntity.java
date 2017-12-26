@@ -29,13 +29,17 @@ public class UserStoryEntity {
 
     @ManyToOne
     @JoinColumn(name = "feature")
-    private FeatureEntity featureEntity;
+    private FeatureEntity feature;
 
-    @OneToMany(mappedBy = "userStory")
-    private List<TaskEntity> taskEntityList;
+    @ManyToOne
+    @JoinColumn(name = "sprint")
+    private SprintEntity sprint;
 
-    @OneToMany(mappedBy = "userStory")
-    private List<BugEntity> bugEntityList;
+    @OneToMany(mappedBy = "userStory", cascade=CascadeType.ALL)
+    private List<TaskEntity> taskList;
+
+    @OneToMany(mappedBy = "userStory", cascade=CascadeType.ALL)
+    private List<BugEntity> bugList;
 
     @Override
     public String toString() {
@@ -44,9 +48,10 @@ public class UserStoryEntity {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", status=" + status +
-                ", featureEntity=" + featureEntity +
-                ", taskEntityList=" + taskEntityList +
-                ", bugEntityList=" + bugEntityList +
+                ", feature=" + feature +
+                ", sprint=" + sprint +
+                ", taskList=" + taskList +
+                ", bugList=" + bugList +
                 '}';
     }
 }

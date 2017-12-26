@@ -28,7 +28,7 @@ public class BugEntity {
 
     @ManyToOne
     @JoinColumn(name = "userStory")
-    private UserStoryEntity userStoryEntity;
+    private UserStoryEntity userStory;
 
     @Override
     public String toString() {
@@ -37,7 +37,7 @@ public class BugEntity {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", status=" + status +
-                ", userStoryEntity=" + userStoryEntity +
+                ", userStory=" + userStory +
                 '}';
     }
 }

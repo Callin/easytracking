@@ -23,12 +23,12 @@ public class EpicEntity {
     @Column(name = "status")
     private Status status;
 
-    @ManyToOne
-    @JoinColumn(name = "sprint")
-    private SprintEntity sprintEntity;
+    @OneToMany(mappedBy = "epic", cascade = CascadeType.ALL)
+    private List<FeatureEntity> featureList;
 
-    @OneToMany(mappedBy = "epic")
-    private List<FeatureEntity> featureEntityList;
+    @ManyToOne
+    @JoinColumn(name = "project")
+    private ProjectEntity project;
 
     @Override
     public String toString() {
@@ -36,8 +36,8 @@ public class EpicEntity {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", status=" + status +
-                ", sprintEntity=" + sprintEntity +
-                ", featureEntityList=" + featureEntityList +
+                ", featureList=" + featureList +
+                ", project=" + project +
                 '}';
     }
 }

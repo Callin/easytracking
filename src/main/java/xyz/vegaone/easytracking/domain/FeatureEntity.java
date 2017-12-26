@@ -29,10 +29,10 @@ public class FeatureEntity {
 
     @ManyToOne
     @JoinColumn(name = "epic")
-    private EpicEntity epicEntity;
+    private EpicEntity epic;
 
-    @OneToMany(mappedBy = "feature")
-    private List<UserStoryEntity> userStoryEntityList;
+    @OneToMany(mappedBy = "feature", cascade=CascadeType.ALL)
+    private List<UserStoryEntity> userStoryList;
 
     @Override
     public String toString() {
@@ -41,8 +41,8 @@ public class FeatureEntity {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", status=" + status +
-                ", epicEntity=" + epicEntity +
-                ", userStoryEntityList=" + userStoryEntityList +
+                ", epic=" + epic +
+                ", userStoryList=" + userStoryList +
                 '}';
     }
 }

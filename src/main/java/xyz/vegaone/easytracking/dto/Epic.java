@@ -13,11 +13,17 @@ public class Epic {
     private Long id;
     private String title;
     private Status status;
-    private Sprint sprint;
+    private Project project;
     private List<Feature> featureList;
 
     @Override
     public String toString() {
-        return "EpicEntity{" + "id=" + id + ", title='" + title + '\'' + ", status=" + status + ", sprint=" + sprint + ", featureList=" + featureList + '}';
+        return "Epic{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", status=" + status +
+                ", project=" + project +
+                ", featureList=" + featureList +
+                '}';
     }
 }
