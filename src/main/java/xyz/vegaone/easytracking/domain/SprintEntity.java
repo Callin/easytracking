@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+import java.util.Date;
 import java.util.List;
 import java.time.LocalDate;
 
@@ -20,10 +21,10 @@ public class SprintEntity {
     private Long id;
 
     @Column(name = "startDate")
-    private LocalDate startDate;
+    private Date startDate;
 
     @Column(name = "endDate")
-    private LocalDate endDate;
+    private Date endDate;
 
     @Column(name = "numberOfDays")
     private int numberOfDays;

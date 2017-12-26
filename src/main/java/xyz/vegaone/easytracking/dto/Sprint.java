@@ -9,19 +9,21 @@ import java.util.*;
 @Getter
 @Setter
 public class Sprint {
-    LocalDate startDate;
-    LocalDate endDate;
-    int numberOfDays;
+    private long id;
+    private Date startDate;
+    private Date endDate;
+    private int numberOfDays;
     private Project project;
     private List<Epic> epicList;
 
     @Override
     public String toString() {
-        return "SprintEntity{" +
-                "startDate=" + startDate +
+        return "Sprint{" +
+                "id=" + id +
+                ", startDate=" + startDate +
                 ", endDate=" + endDate +
                 ", numberOfDays=" + numberOfDays +
-                ", projectEntity=" + project +
+                ", project=" + project +
                 ", epicList=" + epicList +
                 '}';
     }
